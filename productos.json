@@ -1,0 +1,54 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Aros Turquesa Brillante",
+      "precio": 14990,
+      "descripcion": "Aros de arcilla polimérica con acabado brillante y color turquesa vibrante. Livianos y cómodos para usar todo el día.",
+      "imagen": "aro-turquesa.jpg",
+      "categoria": "aros",
+      "color": "Turquesa",
+      "destacado": true
+    },
+    {
+      "id": 2,
+      "nombre": "Aros Morado Mágico",
+      "precio": 16990,
+      "descripcion": "Aros de arcilla polimérica en tono morado intenso con destellos metálicos. Pieza única y llamativa.",
+      "imagen": "aro-morado.jpg",
+      "categoria": "aros",
+      "color": "Morado",
+      "destacado": false
+    },
+    {
+      "id": 3,
+      "nombre": "Aros Verde Lima",
+      "precio": 15990,
+      "descripcion": "Aros de arcilla polimérica color verde lima con textura suave. Perfectos para dar un toque de energía a tu look.",
+      "imagen": "aro-verde-lima.jpg",
+      "categoria": "aros",
+      "color": "Verde Lima",
+      "destacado": false
+    },
+    {
+      "id": 4,
+      "nombre": "Collar Arcoíris",
+      "precio": 19990,
+      "descripcion": "Collar con colgante de arcilla polimérica en colores vibrantes. Incluye cadena ajustable de acero inoxidable.",
+      "imagen": "collar-arcoiris.jpg",
+      "categoria": "collares",
+      "color": "Multicolor",
+      "destacado": true
+    },
+    {
+      "id": 5,
+      "nombre": "Pulsera Mariposa",
+      "precio": 12990,
+      "descripcion": "Pulsera artesanal con dije de mariposa en arcilla polimérica. Elástica y fácil de poner.",
+      "imagen": "pulsera-mariposa.jpg",
+      "categoria": "pulseras",
+      "color": "Rosa",
+      "destacado": false
+    }
+  ]
+}

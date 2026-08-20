@@ -1,0 +1,126 @@
+===========================================================
+   INSTRUCCIONES PARA GESTIONAR VENUS TALLER
+   (Para tu polola, sin necesidad de saber programación)
+===========================================================
+
+¡Hola! Estas son las instrucciones para que puedas administrar
+la página web de Venus Taller fácilmente.
+
+-----------------------------------------------------------
+📁 ARCHIVOS PRINCIPALES
+-----------------------------------------------------------
+
+Los archivos que debes conocer son:
+
+- index.html    → La página web (no la toques)
+- estilo.css    → Los colores y diseños (no la toques)
+- app.js        → La lógica de la página (no la toques)
+- productos.json → ¡ESTE ES EL QUE TÚ EDITA!
+- imagenes/     → Carpeta donde pones las fotos
+- videos/       → Carpeta donde pones los videos
+
+-----------------------------------------------------------
+🛍️ CÓMO AGREGAR UN PRODUCTO NUEVO
+-----------------------------------------------------------
+
+1. Abre el archivo "productos.json" con el Bloc de notas
+
+2. Verás algo como esto:
+
+{
+  "productos": [
+    { ... producto 1 ... },
+    { ... producto 2 ... }
+  ]
+}
+
+3. Para agregar un nuevo producto, copia el bloque de un
+   producto existente (desde { hasta }), pégalo justo
+   ANTES de la última llave "}", y cámbiale los datos.
+
+4. El formato de CADA producto es:
+
+    {
+      "id": 6,                   ← Número único (el siguiente)
+      "nombre": "Nombre del aro",
+      "precio": 15990,           ← Sin puntos, solo números
+      "descripcion": "Descripción corta del producto",
+      "imagen": "nombre-foto.jpg",
+      "categoria": "aros",       ← aros, collares, pulseras
+      "color": "Turquesa",       ← Color del producto
+      "destacado": true          ← true = aparece primero
+    }
+
+5. Guarda el archivo (Ctrl + S) y recarga la página.
+
+-----------------------------------------------------------
+🖼️ CÓMO AGREGAR UNA IMAGEN
+-----------------------------------------------------------
+
+1. Pon la foto del producto en la carpeta "imagenes/"
+2. El nombre del archivo debe ser el mismo que escribiste
+   en "imagen" dentro de productos.json
+3. Formatos: .jpg, .png, .webp
+4. Tamaño recomendado: cuadrado (ej: 800x800)
+
+-----------------------------------------------------------
+🎬 CÓMO AGREGAR UN VIDEO
+-----------------------------------------------------------
+
+1. Pon el video en la carpeta "videos/"
+2. El nombre debe ser "video1.mp4"
+3. Formatos soportados: .mp4, .webm
+
+-----------------------------------------------------------
+🖼️ CÓMO CAMBIAR EL LOGO
+-----------------------------------------------------------
+
+1. Pon tu nuevo logo en la carpeta "imagenes/"
+2. El nombre debe ser "logo.jpeg"
+3. Si quieres otro nombre o formato, dime y lo ajustamos
+
+-----------------------------------------------------------
+🖼️ CÓMO CAMBIAR LA IMAGEN DE FONDO DEL HERO
+-----------------------------------------------------------
+
+1. Pon tu nueva imagen en la carpeta "imagenes/"
+2. El nombre debe ser "imagen1.jpeg"
+3. Si quieres otro nombre, dime y lo ajustamos
+
+-----------------------------------------------------------
+✏️ CÓMO EDITAR UN PRODUCTO EXISTENTE
+-----------------------------------------------------------
+
+1. Abre "productos.json" con el Bloc de notas
+2. Busca el producto que quieras modificar
+3. Cambia el precio, la descripción, el color o el nombre
+4. Guarda y recarga la página
+
+-----------------------------------------------------------
+❌ CÓMO ELIMINAR UN PRODUCTO
+-----------------------------------------------------------
+
+1. Abre "productos.json" con el Bloc de notas
+2. Elimina todo el bloque del producto que no quieras
+   (desde { hasta }, incluyendo las comas)
+3. Guarda y recarga la página
+
+-----------------------------------------------------------
+💡 CONSEJOS IMPORTANTES
+-----------------------------------------------------------
+
+- Guarda siempre una copia de respaldo de productos.json
+  antes de hacer cambios grandes.
+
+- Si la página no muestra los cambios, recarga con
+  Ctrl + F5 (recarga forzada).
+
+- Para subir las fotos, asegúrate de que los nombres
+  coincidan exactamente (mayúsculas/minúsculas importan).
+
+- Si algo no funciona, solo restaura el archivo original
+  y vuelve a intentarlo.
+
+-----------------------------------------------------------
+¡Cualquier duda, me escribes! ¡Éxito con Venus Taller! 🚐✨💜
+===========================================================

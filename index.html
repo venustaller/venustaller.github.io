@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venus Taller · Hecho a mano sobre ruedas</title>
+    <meta name="description" content="Piezas hechas a mano con arcilla polimérica, moldeadas en cada rincón del mundo. Diseños únicos para que brilles con seguridad y estilo." />
+
+    <!-- Google Fonts: Lobster + Nunito para el resto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Logo centrado -->
+                <a href="#" class="logo">
+                    <img src="imagenes/logo.jpeg" alt="Venus Taller" class="logo__img" />
+                    <span class="logo__tagline">✦ Hecho a mano sobre ruedas ✦</span>
+                </a>
+                <!-- Menú debajo del logo -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#nosotras">Nosotras</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero__fondo">
+            <img src="imagenes/imagen1.jpeg" alt="Venus Taller" class="hero__fondo-img" />
+            <div class="hero__fondo-overlay"></div>
+        </div>
+        <div class="container hero__container">
+            <div class="hero__content">
+                <span class="hero__badge">✦ Hecho a mano sobre ruedas ✦</span>
+                <h1 class="hero__title">
+                    <span class="hero__title--highlight">Accesorios</span> que complementan tu belleza
+                </h1>
+                <p class="hero__subtitle">
+                    Hechos 100% a mano con arcilla polimérica · <span class="text-morado">Hecho a mano sobre ruedas</span>
+                </p>
+                <a href="#productos" class="btn btn--rosa">✨ Descubrir colección</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SOBRE NOSOTRAS ============ -->
+    <section class="sobre" id="nosotras">
+        <div class="container">
+            <span class="tag">✨ Sobre nosotras</span>
+            <h2>Una historia hecha a mano <br />sobre ruedas</h2>
+
+            <div class="sobre__grid">
+                <!-- Columna izquierda: Video -->
+                <div class="sobre__media">
+                    <div class="sobre__video-wrapper">
+                        <video class="sobre__video" autoplay loop muted playsinline>
+                            <source src="videos/video1.mp4" type="video/mp4" />
+                            Tu navegador no soporta videos.
+                        </video>
+                        <div class="sobre__video-overlay">
+                            <span class="sobre__video-icon">🎬</span>
+                            <span class="sobre__video-text">Creando con amor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Texto completo con "Leer más" -->
+                <div class="sobre__texto" id="sobreTexto">
+                    <div class="sobre__texto-contenido" id="sobreContenido">
+                        <p><strong>Venus Taller</strong> no nació entre cuatro paredes ni en una fábrica impersonal. Nació sobre la marcha, al ritmo de los caminos. Todo comenzó hace algunos veranos, cuando mis manos aprendieron el arte del macramé y el alambrismo para crear accesorios mientras mochileaba, convirtiendo cada nudo y cada torsión de alambre en pequeños ingresos que me permitieran seguir explorando. Pero fue en medio de la pandemia cuando este sueño encontró su nombre y su alma: <strong>Venus</strong>, mi perrita fiel, que ha estado a mi lado en cada creación, lamiendo mis manos mientras tejía y dándome la compañía que solo un ser de cuatro patas sabe dar. Desde entonces, cada pieza lleva su esencia.</p>
+
+                        <p>Con el tiempo, mi amor por lo artesanal fue evolucionando, y fue el año pasado cuando descubrí mi verdadera pasión: la <strong>arcilla polimérica</strong>. Desde entonces, me dedico casi a tiempo completo a moldear, hornear y dar vida a este material mágico que me permite crear accesorios con texturas, colores y formas infinitas. Dejé atrás los hilos (aunque siempre estarán en mi corazón) para sumergirme en un mundo donde puedo esculpir flores, figuras abstractas, gemas falsas y detalles minuciosos que parecen sacados de un sueño. Hoy, la arcilla polimérica es mi principal medio de expresión y el corazón de Venus Taller.</p>
+
+                        <p>Pero lo que realmente hace único a Venus Taller es algo que ninguna otra marca puede ofrecer: cada pieza absorbe la energía del lugar donde fue creada. Como vivo viajando en mi casa rodante junto a mi pareja, mis manos no trabajan siempre en el mismo sitio. Hay piezas que nacen frente al mar, con el sonido de las olas de fondo; otras se moldean en medio de un bosque, bajo la sombra de árboles centenarios; y algunas toman forma al atardecer, en un desierto infinito, bañadas por los colores cálidos del sol poniente. Esa energía, ese momento, ese paisaje, quedan atrapados en cada accesorio. Cuando usas una pieza de Venus Taller, no estás usando un simple accesorio: estás llevando contigo la brisa del mar, el silencio del bosque o la calidez del desierto.</p>
+
+                        <p>Mi objetivo con cada creación va mucho más allá de lo estético. No solo quiero que mis accesorios sean bonitos; quiero que quien los use se sienta hermosa y llena de seguridad. Porque sé lo que es mirarse al espejo y sentir que ese pequeño detalle, ese arete, ese collar o ese dije, te da ese empujón de confianza que necesitas para enfrentar el día. Quiero que mis piezas sean ese recordatorio diario de que eres única, valiosa y capaz de brillar con luz propia. Cada diseño está pensado para realzar tu belleza natural y para que, al ponértelo, sientas que llevas puesta una obra de arte con historia.</p>
+
+                        <p><strong>Venus Taller</strong> es libertad, es creatividad y es estilo auténtico. Es la rebeldía de no seguir modas impuestas, sino de crear las nuestras propias. Es la prueba de que lo hecho a mano, con paciencia y con alma, siempre tendrá un valor que lo industrial no puede igualar. Cada pieza es absolutamente diferente, porque no uso moldes industriales ni reproduzco diseños en serie. Cada arete, cada collar, cada llavero es una decisión artística en el momento, influenciada por mi estado de ánimo, el paisaje que me rodea y la música que suena en mi casa rodante. Al usar Venus Taller, no solo te estás vistiendo: estás diciendo al mundo que valoras lo auténtico, lo artesanal y lo lleno de significado.</p>
+
+                        <p>Hoy, en el año 2026, <strong>Venus Taller es mi sustento diario sobre ruedas</strong>. Junto a mi pareja, recorremos caminos sin rumbo fijo, pero con el rumbo claro en el corazón: vivir de lo que amamos. Mi taller se mueve con nosotros; a veces es una mesa plegable al costado de la carretera, a veces el suelo de un camping, a veces la sombra de un árbol. Pero siempre, siempre, está Venus, mi perrita, supervisando cada paso con su mirada tranquila y su cola que no deja de moverse.</p>
+
+                        <p>Cada pedido que sale de Venus Taller viaja con una historia escrita entre nudos, arcilla y kilómetros. Llega a tus manos en un empaque cuidado con cariño, porque para nosotras (mi pareja, Venus y yo) cada cliente es parte de nuestra tribu viajera. Te invitamos a explorar nuestras colecciones, a dejarte sorprender por la singularidad de cada pieza y a llevarte un pedacito de nuestra aventura. Cuando eliges Venus Taller, no solo estás comprando un accesorio: estás abrazando un estilo de vida, estás apoyando un sueño nómada y estás eligiendo sentirte hermosa, segura y libre.</p>
+
+                        <p class="sobre__frase-final">Gracias por viajar con nosotras. Bienvenido/a a Venus Taller. 🐾🚐✨🌸</p>
+                    </div>
+                    <button class="btn-leer-mas" id="btnLeerMas">📖 Leer más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CATEGORÍAS ============ -->
+    <section class="categorias">
+        <div class="container">
+            <span class="tag">🌟 Categorías</span>
+            <h2>Encuentra tu estilo</h2>
+            <div class="categorias__grid">
+                <div class="categoria-card" style="--cat-color: #7C4DFF; --cat-bg: rgba(124,77,255,0.08);">
+                    <span class="categoria-card__icon">✦</span>
+                    <h3>Aros</h3>
+                    <p>Livianos, coloridos y llenos de personalidad</p>
+                </div>
+                <div class="categoria-card" style="--cat-color: #00BCD4; --cat-bg: rgba(0,188,212,0.08);">
+                    <span class="categoria-card__icon">✦</span>
+                    <h3>Collares</h3>
+                    <p>Piezas únicas que cuentan historias</p>
+                </div>
+                <div class="categoria-card" style="--cat-color: #32CD32; --cat-bg: rgba(50,205,50,0.08);">
+                    <span class="categoria-card__icon">✦</span>
+                    <h3>Pulseras</h3>
+                    <p>Elásticas, cómodas y llenas de color</p>
+                </div>
+                <div class="categoria-card" style="--cat-color: #FF4081; --cat-bg: rgba(255,64,129,0.08);">
+                    <span class="categoria-card__icon">✦</span>
+                    <h3>Accesorios</h3>
+                    <p>Detalles especiales para tu día a día</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRODUCTOS ============ -->
+    <section class="productos" id="productos">
+        <div class="container">
+            <span class="tag">🌈 Colección</span>
+            <h2>Nuestros accesorios</h2>
+            <p class="productos__subtitulo">Cada pieza es única, hecha a mano con arcilla polimérica</p>
+            <div class="productos__filtros">
+                <button class="filtro-btn filtro-btn--activo" data-filtro="todos">✨ Todos</button>
+                <button class="filtro-btn" data-filtro="aros">💜 Aros</button>
+                <button class="filtro-btn" data-filtro="collares">💚 Collares</button>
+                <button class="filtro-btn" data-filtro="pulseras">💛 Pulseras</button>
+            </div>
+            <div class="productos__grid" id="productosGrid">
+                <div class="loading">🌟 Cargando productos...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ POLÍTICAS ============ -->
+    <section class="politicas" id="politicas">
+        <div class="container">
+            <span class="tag">📋 Políticas</span>
+            <h2>Información de compra</h2>
+            <div class="politicas__grid">
+                <div class="politica-card" style="--card-color: #7C4DFF;">
+                    <span class="politica-card__icon">🚚</span>
+                    <h3>Envíos a todo Chile</h3>
+                    <p>Realizamos envíos a todo el país a través de <strong>Blue Express</strong>. Recibirás un número de seguimiento para que puedas rastrear tu pedido.</p>
+                </div>
+                <div class="politica-card" style="--card-color: #00BCD4;">
+                    <span class="politica-card__icon">🔄</span>
+                    <h3>Cambios y devoluciones</h3>
+                    <p>Si no estás 100% satisfecha con tu compra, puedes solicitar un cambio dentro de los primeros 7 días. Cada pieza está hecha con cariño, queremos que la ames tanto como nosotras.</p>
+                </div>
+                <div class="politica-card" style="--card-color: #32CD32;">
+                    <span class="politica-card__icon">💳</span>
+                    <h3>Métodos de pago</h3>
+                    <p>Aceptamos transferencia bancaria, Mercado Pago y tarjetas de crédito/débito a través de nuestra plataforma de pagos segura.</p>
+                </div>
+                <div class="politica-card" style="--card-color: #FF4081;">
+                    <span class="politica-card__icon">⭐</span>
+                    <h3>Piezas 100% originales</h3>
+                    <p>Piezas 100% originales y hechas a mano. Diseños que no se repiten, porque la creatividad no tiene moldes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PREGUNTAS FRECUENTES ============ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="tag">❓ Preguntas frecuentes</span>
+            <h2>Resolvemos tus dudas</h2>
+            <div class="faq__list">
+                <div class="faq-item">
+                    <button class="faq-item__pregunta">¿Cuánto tiempo tardan en llegar los pedidos? <span class="faq-item__icon">+</span></button>
+                    <div class="faq-item__respuesta">
+                        <p>El tiempo de entrega depende de tu ubicación. A través de Blue Express, los envíos suelen tardar entre 3 a 7 días hábiles dentro de Chile. Recibirás un número de seguimiento para que puedas rastrear tu pedido paso a paso.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__pregunta">¿Puedo pedir un diseño personalizado? <span class="faq-item__icon">+</span></button>
+                    <div class="faq-item__respuesta">
+                        <p>¡Por supuesto! Como cada pieza es hecha a mano, podemos crear diseños personalizados especialmente para ti. Escríbenos por WhatsApp o Instagram y conversamos sobre tu idea.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__pregunta">¿Los accesorios son aptos para pieles sensibles? <span class="faq-item__icon">+</span></button>
+                    <div class="faq-item__respuesta">
+                        <p>Utilizamos acero inoxidable y materiales hipoalergénicos en los herrajes. Sin embargo, si tienes alergias específicas, escríbenos y te contamos con más detalle los materiales de cada pieza.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__pregunta">¿Hacen envíos fuera de Chile? <span class="faq-item__icon">+</span></button>
+                    <div class="faq-item__respuesta">
+                        <p>Actualmente realizamos envíos solo dentro de Chile a través de Blue Express. Pero no descartamos expandirnos en el futuro. ¡Síguenos en redes para estar al tanto!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="contacto__inner">
+                <div class="contacto__info">
+                    <span class="tag">💬 Contacto</span>
+                    <h2>¿Tienes alguna duda?</h2>
+                    <p>Escríbenos por WhatsApp o redes sociales. Estamos aquí para ayudarte a encontrar el accesorio perfecto.</p>
+                    <div class="contacto__datos">
+                        <a href="https://wa.me/56932494839" target="_blank" class="btn btn--whatsapp">
+                            <span>💬</span> Conversemos
+                        </a>
+                        <div class="contacto__redes">
+                            <a href="https://instagram.com/venus.taller" target="_blank" class="contacto__red" aria-label="Instagram">
+                                <img src="imagenes/iglogo.png" alt="Instagram" class="contacto__icon" />
+                                @venus.taller
+                            </a>
+                            <a href="https://tiktok.com/@venus.taller" target="_blank" class="contacto__red" aria-label="TikTok">
+                                <img src="imagenes/tiktoklogo.png" alt="TikTok" class="contacto__icon" />
+                                @venus.taller
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Patitas en horizontal -->
+                    <div class="contacto__patitas">
+                        <span>🐾</span>
+                        <span>🐾</span>
+                        <span>🐾</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <img src="imagenes/logo.jpeg" alt="Venus Taller" class="footer__logo" />
+                    <p class="footer__tagline">✦ Hecho a mano sobre ruedas ✦</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#productos">🌟 Productos</a>
+                    <a href="#nosotras">✨ Nosotras</a>
+                    <a href="#politicas">📋 Políticas</a>
+                    <a href="#faq">❓ FAQ</a>
+                    <a href="#contacto">💬 Contacto</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://instagram.com/venus.taller" target="_blank" aria-label="Instagram">
+                        <img src="imagenes/iglogo.png" alt="Instagram" class="footer__social-icon" />
+                    </a>
+                    <a href="https://tiktok.com/@venus.taller" target="_blank" aria-label="TikTok">
+                        <img src="imagenes/tiktoklogo.png" alt="TikTok" class="footer__social-icon" />
+                    </a>
+                    <a href="https://wa.me/56932494839" target="_blank" aria-label="WhatsApp">💬</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Venus Taller · Hecho a mano sobre ruedas · Con 💜 desde la carretera</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
