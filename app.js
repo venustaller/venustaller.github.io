@@ -48,7 +48,19 @@ function cargarProductos(filtro = 'todos') {
                 'Multicolor': 'linear-gradient(135deg, #FF4081, #FFD740, #00BCD4)',
                 'Rosa': '#FF4081',
                 'Amarillo': '#FFD740',
-                'Naranjo': '#FF9100'
+                'Naranjo': '#FF9100',
+                'Celeste': '#4DD0E1',
+                'Lila': '#CE93D8',
+                'Verde': '#66BB6A',
+                'Coral': '#FF7043',
+                'Dorado': '#FFD700',
+                'Plateado': '#B0BEC5',
+                'Fucsia': '#E91E63',
+                'Blanco': '#FFFFFF',
+                'Negro': '#333333',
+                'Marrón': '#8D6E63',
+                'Azul': '#42A5F5',
+                'Rojo': '#EF5350'
             };
 
             let html = '';
@@ -64,6 +76,20 @@ function cargarProductos(filtro = 'todos') {
                     ? `<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:${colorStyle};border:2px solid #eee;vertical-align:middle;margin-right:4px;"></span>`
                     : `<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:${colorStyle};border:2px solid #eee;vertical-align:middle;margin-right:4px;"></span>`;
 
+                // Estado de disponibilidad
+                const estadoHtml = producto.disponible 
+                    ? '<span class="producto-card__estado producto-card__estado--disponible">✅ Disponible</span>' 
+                    : '<span class="producto-card__estado producto-card__estado--agotado">❌ Agotado</span>';
+
+                // Botón de acción según disponibilidad
+                const botonHtml = producto.disponible
+                    ? `<a href="https://wa.me/56932494839?text=Hola%20Venus%20Taller!%20Me%20interesa%20el%20producto%3A%20${encodeURIComponent(producto.nombre)}%20($${precioFormateado})%20-%20Color%3A%20${encodeURIComponent(producto.color || '')}" 
+                          target="_blank" 
+                          class="producto-card__btn">
+                          💬 Consultar por WhatsApp
+                       </a>`
+                    : `<button class="producto-card__btn producto-card__btn--agotado" disabled>❌ Agotado</button>`;
+
                 html += `
                     <div class="producto-card" data-categoria="${producto.categoria}">
                         <div class="producto-card__imagen">
@@ -76,11 +102,8 @@ function cargarProductos(filtro = 'todos') {
                             <div class="producto-card__color">${colorDisplay} ${producto.color || ''}</div>
                             <p class="producto-card__descripcion">${producto.descripcion || ''}</p>
                             <span class="producto-card__precio">$${precioFormateado}</span>
-                            <a href="https://wa.me/56932494839?text=Hola%20Venus%20Taller!%20Me%20interesa%20el%20producto%3A%20${encodeURIComponent(producto.nombre)}%20($${precioFormateado})%20-%20Color%3A%20${encodeURIComponent(producto.color || '')}" 
-                               target="_blank" 
-                               class="producto-card__btn">
-                                💬 Consultar por WhatsApp
-                            </a>
+                            ${estadoHtml}
+                            ${botonHtml}
                         </div>
                     </div>
                 `;
@@ -156,15 +179,4 @@ function inicializarMenu() {
     }
 }
 
-// ----- LEER MÁS (Sobre nosotras) -----
-function inicializarLeerMas() {
-    const btn = document.getElementById('btnLeerMas');
-    const contenido = document.getElementById('sobreContenido');
-
-    if (btn && contenido) {
-        btn.addEventListener('click', function() {
-            const abierto = contenido.classList.toggle('sobre__texto-contenido--abierto');
-            btn.textContent = abierto ? '📖 Leer menos' : '📖 Leer más';
-        });
-    }
-}
+// ----- LEER MÁS (S
