@@ -244,12 +244,12 @@
     },
     {
       "id": 23,
-      "nombre": "Aros Frambuesa",
-      "precio": 15990,
-      "descripcion": "Aros de arcilla polimérica color frambuesa. Vibrantes y llenos de vida.",
-      "imagen": "aro-frambuesa.jpg",
+      "nombre": "Aros Mini Elena",
+      "precio": 3990,
+      "descripcion": "Aros de arcilla polimérica con forma de miniflor para dar un toque sutil de brillo a tu look",
+      "imagen": "miniflor1.jpeg",
       "categoria": "aros",
-      "color": "Rosa",
+      "color": "fucsia",
       "destacado": false,
       "disponible": true
     },
