@@ -1135,3 +1135,44 @@ section h2 {
         justify-content: center;
     }
 }
+/* ============================================
+   ESTADO DEL PRODUCTO (disponible / agotado)
+   ============================================ */
+.producto-card__estado {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 10px;
+}
+
+.producto-card__estado--disponible {
+    background: rgba(50, 205, 50, 0.12);
+    color: #2E7D32;
+}
+
+.producto-card__estado--agotado {
+    background: rgba(244, 67, 54, 0.12);
+    color: #C62828;
+}
+
+.producto-card__btn--agotado {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+    pointer-events: none;
+    border: none;
+    border-radius: 50px;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.producto-card__btn--agotado:hover {
+    transform: none;
+    box-shadow: none;
+}
