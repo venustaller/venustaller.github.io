@@ -179,4 +179,15 @@ function inicializarMenu() {
     }
 }
 
-// ----- LEER MÁS (S
+// ----- LEER MÁS (Sobre nosotras) -----
+function inicializarLeerMas() {
+    const btn = document.getElementById('btnLeerMas');
+    const contenido = document.getElementById('sobreContenido');
+
+    if (btn && contenido) {
+        btn.addEventListener('click', function() {
+            const abierto = contenido.classList.toggle('sobre__texto-contenido--abierto');
+            btn.textContent = abierto ? '📖 Leer menos' : '📖 Leer más';
+        });
+    }
+}
