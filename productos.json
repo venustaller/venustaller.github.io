@@ -189,7 +189,7 @@
     },
     {
       "id": 18,
-      "nombre": "Mini Corazón plateado",
+      "nombre": "Aros Mini Corazón plateado",
       "precio": 3990,
       "descripcion": "Aros de arcilla polimérica con forma de corazón color plateado.",
       "imagen": "corazonplateado.jpeg",
@@ -200,7 +200,7 @@
     },
     {
       "id": 19,
-      "nombre": "Naranja",
+      "nombre": "Aros Naranja",
       "precio": 9990,
       "descripcion": "Aros de arcilla polimérica con forma de naranja. Orgánicos y auténticos.",
       "imagen": "naranja.png",
@@ -233,7 +233,7 @@
     },
     {
       "id": 22,
-      "nombre": "Girl Power",
+      "nombre": "Aros Girl Power",
       "precio": 4990,
       "descripcion": "Aros de arcilla polimérica para empoderarte porque somos fuertes",
       "imagen": "girlpower.jpeg",
