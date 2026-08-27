@@ -188,6 +188,17 @@ function inicializarLeerMas() {
         btn.addEventListener('click', function() {
             const abierto = contenido.classList.toggle('sobre__texto-contenido--abierto');
             btn.textContent = abierto ? '📖 Leer menos' : '📖 Leer más';
+            
+            if (abierto) {
+                contenido.style.maxHeight = 'none';
+            } else {
+                contenido.style.maxHeight = '';
+            }
         });
+
+        if (window.innerWidth <= 768) {
+            contenido.classList.remove('sobre__texto-contenido--abierto');
+            btn.textContent = '📖 Leer más';
+        }
     }
 }
