@@ -449,16 +449,16 @@ section h2 {
 }
 
 .sobre__texto-contenido--abierto {
-    max-height: none;
+    max-height: none !important;
 }
 
 @media (max-width: 768px) {
     .sobre__texto-contenido {
-        max-height: 180px;  
+        max-height: 180px !important;  
     }
     
     .sobre__texto-contenido--abierto {
-        max-height: none;   
+        max-height: none !important;   
     }
 }
 
