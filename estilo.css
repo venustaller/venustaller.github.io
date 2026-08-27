@@ -409,7 +409,8 @@ section h2 {
 .sobre__video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #f5f0fa;
 }
 
 .sobre__video-overlay {
@@ -442,12 +443,21 @@ section h2 {
 
 .sobre__texto-contenido {
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.6s ease;
     max-height: 380px;
 }
 
 .sobre__texto-contenido--abierto {
-    max-height: 6000px;
+    max-height: none;
+}
+@media (max-width: 768px) {
+    .sobre__texto-contenido {
+        max-height: 180px;  /* Menos texto visible en celular */
+    }
+    
+    .sobre__texto-contenido--abierto {
+        max-height: none;   /* Al abrir, se expande completamente */
+    }
 }
 
 .sobre__frase-final {
@@ -473,6 +483,22 @@ section h2 {
 
 .btn-leer-mas:hover {
     color: #FF4081;
+}
+@media (max-width: 768px) {
+    .btn-leer-mas {
+        font-size: 0.9rem;
+        padding: 14px 0;
+        width: 100%;
+        background: rgba(124, 77, 255, 0.06);
+        border-radius: 30px;
+        margin-top: 8px;
+        text-align: center;
+    }
+    
+    .btn-leer-mas:hover {
+        background: rgba(124, 77, 255, 0.12);
+        color: #7C4DFF;
+    }
 }
 
 @media (max-width: 768px) {
