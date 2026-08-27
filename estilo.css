@@ -408,9 +408,10 @@ section h2 {
 
 .sobre__video {
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: auto;
     object-fit: contain;
-    background: #f5f0fa;
+    max-height: 600px;
 }
 
 .sobre__video-overlay {
@@ -450,13 +451,14 @@ section h2 {
 .sobre__texto-contenido--abierto {
     max-height: none;
 }
+
 @media (max-width: 768px) {
     .sobre__texto-contenido {
-        max-height: 180px;  /* Menos texto visible en celular */
+        max-height: 180px;  
     }
     
     .sobre__texto-contenido--abierto {
-        max-height: none;   /* Al abrir, se expande completamente */
+        max-height: none;   
     }
 }
 
