@@ -211,7 +211,7 @@
     },
     {
       "id": 20,
-      "nombre": "Aros Kaly doble verde",
+      "nombre": "Aros Sonia doble verde",
       "precio": 10990,
       "descripcion": "Aros de arcilla polimérica rayas verde bosque profundo con verde limón.",
       "imagen": "triplecirculova.png",
@@ -266,7 +266,7 @@
     },
     {
       "id": 25,
-      "nombre": "Aros Kaly forma corazón",
+      "nombre": "Aros Sonia forma corazón",
       "precio": 4990,
       "descripcion": "Aros de arcilla polimérica con 3 mini corazones rayados color azul-celeste. Divertidos y juveniles.",
       "imagen": "corazonrayaca.png",
@@ -299,17 +299,6 @@
     },
     {
       "id": 28,
-      "nombre": "Aros Aguamarina",
-      "precio": 17990,
-      "descripcion": "Aros de arcilla polimérica color aguamarina. Transparentes y luminosos.",
-      "imagen": "aro-aguamarina.jpg",
-      "categoria": "aros",
-      "color": "Celeste",
-      "destacado": false,
-      "disponible": true
-    },
-    {
-      "id": 29,
       "nombre": "Aros Hortensia Burdeo",
       "precio": 9990,
       "descripcion": "Aros de arcilla polimérica con forma de hortensia color burdeo. Naturales y orgánicos.",
@@ -320,7 +309,7 @@
       "disponible": true
     },
     {
-      "id": 30,
+      "id": 29,
       "nombre": "Aros Corazón-Flor",
       "precio": 4990,
       "descripcion": "Aros de arcilla polimérica con forma de Corazón-flor color Lila y Verde limón.",
@@ -331,7 +320,7 @@
       "disponible": true
     },
     {
-      "id": 31,
+      "id": 30,
       "nombre": "Aros Verónica Negro-Plata",
       "precio": 7990,
       "descripcion": "Aros de arcilla polimérica con 3 mini flores color negro con plateado. Elegancia brillante.",
@@ -342,7 +331,7 @@
       "disponible": true
     },
     {
-      "id": 32,
+      "id": 31,
       "nombre": "Aros Mid-Elena Morado-Lima",
       "precio": 8990,
       "descripcion": "Aros de arcilla polimérica con forma de medias flores color morado con verde limón.",
