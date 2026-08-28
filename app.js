@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     inicializarFAQ();
     inicializarMenu();
     inicializarLeerMas();
+    inicializarBuscador();
 });
 
 // ----- CARGAR PRODUCTOS -----
@@ -224,5 +225,17 @@ function inicializarLeerMas() {
             contenido.classList.remove('sobre__texto-contenido--abierto');
             btn.textContent = '📖 Leer más';
         }
+    }
+}
+// ----- BUSCADOR DE PRODUCTOS -----
+function inicializarBuscador() {
+    const buscador = document.getElementById('buscadorProductos');
+    if (buscador) {
+        buscador.addEventListener('input', function() {
+            textoBusqueda = this.value;
+            const filtroActivo = document.querySelector('.filtro-btn--activo');
+            const categoria = filtroActivo ? filtroActivo.dataset.filtro : 'todos';
+            cargarProductos(categoria, textoBusqueda);
+        });
     }
 }
