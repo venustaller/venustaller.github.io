@@ -23,9 +23,6 @@ let textoBusqueda = '';
 // ----- CARGAR PRODUCTOS -----
 function cargarProductos(filtro = 'todos', busqueda = '') {
     const grid = document.getElementById('productosGrid');
-    grid.style.display = 'grid';
-    grid.style.gridTemplateColumns = 'repeat(4, 1fr)';
-    grid.style.gap = '28px';
     grid.innerHTML = '<div class="loading">🌟 Cargando productos...</div>';
 
     fetch('productos.json')
