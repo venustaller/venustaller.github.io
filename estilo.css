@@ -1204,3 +1204,28 @@ section h2 {
     transform: none;
     box-shadow: none;
 }
+/* ============================================
+   FORZAR GRID DE PRODUCTOS
+   ============================================ */
+#productosGrid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 28px !important;
+    width: 100% !important;
+}
+
+/* Para tablet */
+@media (max-width: 992px) {
+    #productosGrid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+}
+
+/* Para celular */
+@media (max-width: 480px) {
+    #productosGrid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 14px !important;
+    }
+}
