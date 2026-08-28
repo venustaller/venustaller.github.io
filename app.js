@@ -12,10 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     inicializarBuscador();
 });
 
-// ----- CARGAR PRODUCTOS -----
-// ============================================
-// VARIABLES GLOBALES
-// ============================================
+// ----- VARIABLES GLOBALES -----
 let todosLosProductos = [];
 let filtroActual = 'todos';
 let textoBusqueda = '';
@@ -38,18 +35,14 @@ function cargarProductos(filtro = 'todos', busqueda = '') {
                 return;
             }
 
-            // Guardar todos los productos
             todosLosProductos = data.productos;
 
-            // Aplicar filtros
             let productosFiltrados = todosLosProductos;
 
-            // 1. Filtrar por categoría
             if (filtro !== 'todos') {
                 productosFiltrados = productosFiltrados.filter(p => p.categoria === filtro);
             }
 
-            // 2. Filtrar por búsqueda (nombre, color o descripción)
             if (busqueda.trim() !== '') {
                 const busquedaLower = busqueda.toLowerCase().trim();
                 productosFiltrados = productosFiltrados.filter(p => {
@@ -59,7 +52,6 @@ function cargarProductos(filtro = 'todos', busqueda = '') {
                 });
             }
 
-            // Ordenar: destacados primero
             productosFiltrados.sort((a, b) => (b.destacado ? 1 : 0) - (a.destacado ? 1 : 0));
 
             if (productosFiltrados.length === 0) {
@@ -102,12 +94,10 @@ function cargarProductos(filtro = 'todos', busqueda = '') {
                     ? `<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:${colorStyle};border:2px solid #eee;vertical-align:middle;margin-right:4px;"></span>`
                     : `<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:${colorStyle};border:2px solid #eee;vertical-align:middle;margin-right:4px;"></span>`;
 
-                // Estado de disponibilidad
                 const estadoHtml = producto.disponible 
                     ? '<span class="producto-card__estado producto-card__estado--disponible">✅ Disponible</span>' 
                     : '<span class="producto-card__estado producto-card__estado--agotado">❌ Agotado</span>';
 
-                // Botón de acción según disponibilidad
                 const botonHtml = producto.disponible
                     ? `<a href="https://wa.me/56932494839?text=Hola%20Venus%20Taller!%20Me%20interesa%20el%20producto%3A%20${encodeURIComponent(producto.nombre)}%20($${precioFormateado})%20-%20Color%3A%20${encodeURIComponent(producto.color || '')}" 
                           target="_blank" 
@@ -117,23 +107,23 @@ function cargarProductos(filtro = 'todos', busqueda = '') {
                     : `<button class="producto-card__btn producto-card__btn--agotado" disabled>❌ Agotado</button>`;
 
                 html += `
-                    <a href="producto.html?id=${producto.id}" class="producto-card-link" style="text-decoration:none;color:inherit;display:block;">
+                    <a href="producto.html?id=${producto.id}" class="producto-card-link">
                         <div class="producto-card" data-categoria="${producto.categoria}">
-                        <div class="producto-card__imagen">
-                            ${imagenHtml}
-                            ${producto.destacado ? '<div style="position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FFD740,#FF9100);color:#fff;padding:4px 14px;border-radius:30px;font-size:0.7rem;font-weight:700;font-family:Nunito,sans-serif;">⭐ Destacado</div>' : ''}
+                            <div class="producto-card__imagen">
+                                ${imagenHtml}
+                                ${producto.destacado ? '<div style="position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FFD740,#FF9100);color:#fff;padding:4px 14px;border-radius:30px;font-size:0.7rem;font-weight:700;font-family:Nunito,sans-serif;">⭐ Destacado</div>' : ''}
+                            </div>
+                            <div class="producto-card__info">
+                                <span class="producto-card__categoria">✦ ${producto.categoria}</span>
+                                <h3 class="producto-card__nombre">${producto.nombre}</h3>
+                                <div class="producto-card__color">${colorDisplay} ${producto.color || ''}</div>
+                                <p class="producto-card__descripcion">${producto.descripcion || ''}</p>
+                                <span class="producto-card__precio">$${precioFormateado}</span>
+                                ${estadoHtml}
+                                ${botonHtml}
+                            </div>
                         </div>
-                        <div class="producto-card__info">
-                            <span class="producto-card__categoria">✦ ${producto.categoria}</span>
-                            <h3 class="producto-card__nombre">${producto.nombre}</h3>
-                            <div class="producto-card__color">${colorDisplay} ${producto.color || ''}</div>
-                            <p class="producto-card__descripcion">${producto.descripcion || ''}</p>
-                            <span class="producto-card__precio">$${precioFormateado}</span>
-                            ${estadoHtml}
-                            ${botonHtml}
-                        </div>
-                    </div>
-                </a>
+                    </a>
                 `;
             });
 
@@ -149,6 +139,7 @@ function cargarProductos(filtro = 'todos', busqueda = '') {
             `;
         });
 }
+
 // ----- FORMATEAR PRECIO -----
 function formatearPrecio(precio) {
     return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -175,19 +166,16 @@ function inicializarFAQ() {
             const item = this.closest('.faq-item');
             const estaAbierto = item.classList.contains('faq-item--abierto');
 
-            // Cerrar todos
             document.querySelectorAll('.faq-item').forEach(el => {
                 el.classList.remove('faq-item--abierto');
             });
 
-            // Abrir el que se clickeó si estaba cerrado
             if (!estaAbierto) {
                 item.classList.add('faq-item--abierto');
             }
         });
     });
 
-    // Abrir el primero por defecto
     const primerItem = document.querySelector('.faq-item');
     if (primerItem) {
         primerItem.classList.add('faq-item--abierto');
@@ -229,6 +217,7 @@ function inicializarLeerMas() {
         }
     }
 }
+
 // ----- BUSCADOR DE PRODUCTOS -----
 function inicializarBuscador() {
     const buscador = document.getElementById('buscadorProductos');
