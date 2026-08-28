@@ -120,7 +120,8 @@ function cargarProductos(filtro = 'todos', busqueda = '') {
                     : `<button class="producto-card__btn producto-card__btn--agotado" disabled>❌ Agotado</button>`;
 
                 html += `
-                    <div class="producto-card" data-categoria="${producto.categoria}">
+                    <a href="producto.html?id=${producto.id}" class="producto-card-link" style="text-decoration:none;color:inherit;display:block;">
+                        <div class="producto-card" data-categoria="${producto.categoria}">
                         <div class="producto-card__imagen">
                             ${imagenHtml}
                             ${producto.destacado ? '<div style="position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FFD740,#FF9100);color:#fff;padding:4px 14px;border-radius:30px;font-size:0.7rem;font-weight:700;font-family:Nunito,sans-serif;">⭐ Destacado</div>' : ''}
@@ -135,6 +136,7 @@ function cargarProductos(filtro = 'todos', busqueda = '') {
                             ${botonHtml}
                         </div>
                     </div>
+                </a>
                 `;
             });
 
