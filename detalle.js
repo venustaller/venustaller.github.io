@@ -40,7 +40,6 @@ function cargarDetalleProducto() {
                 return;
             }
 
-            // Actualizar título de la página
             document.title = `${producto.nombre} · Venus Taller`;
 
             const coloresMap = {
@@ -76,8 +75,13 @@ function cargarDetalleProducto() {
 
             const precioFormateado = formatearPrecio(producto.precio);
 
-            // Generar imágenes del carrusel (si hay más de una, usar la principal + otras)
-            const imagenes = [producto.imagen]; // Podrías ampliar esto con más imágenes
+            // Usar el array imagenes si existe, sino usar imagen sola
+            let imagenes = [];
+            if (producto.imagenes && producto.imagenes.length > 0) {
+                imagenes = producto.imagenes;
+            } else if (producto.imagen) {
+                imagenes = [producto.imagen];
+            }
 
             let carruselImagenes = '';
             let indicadores = '';
@@ -92,12 +96,10 @@ function cargarDetalleProducto() {
                 `;
             });
 
-            // Si solo hay una imagen, ocultar los botones de navegación
             const mostrarControles = imagenes.length > 1 ? '' : 'style="display:none;"';
 
             const html = `
                 <div class="detalle__grid">
-                    <!-- Carrusel -->
                     <div class="detalle__carrusel">
                         <div class="detalle__carrusel-imagenes" id="carruselImagenes">
                             ${carruselImagenes}
@@ -109,7 +111,6 @@ function cargarDetalleProducto() {
                         </div>
                     </div>
 
-                    <!-- Información -->
                     <div class="detalle__info">
                         <span class="detalle__categoria">✦ ${producto.categoria}</span>
                         <h1>${producto.nombre}</h1>
@@ -130,8 +131,6 @@ function cargarDetalleProducto() {
             `;
 
             contenedor.innerHTML = html;
-
-            // Inicializar carrusel después de cargar el HTML
             inicializarCarrusel(imagenes.length);
         })
         .catch(error => {
@@ -156,11 +155,9 @@ function inicializarCarrusel(totalImagenes) {
     const btnNext = document.getElementById('carruselNext');
 
     function irA(indice) {
-        // Quitar clase activa de todas las imágenes e indicadores
         imagenes.forEach(img => img.classList.remove('activa'));
         indicadores.forEach(ind => ind.classList.remove('activo'));
 
-        // Activar la imagen e indicador correspondiente
         imagenes[indice].classList.add('activa');
         indicadores[indice].classList.add('activo');
         indiceActual = indice;
@@ -176,14 +173,12 @@ function inicializarCarrusel(totalImagenes) {
         irA(nuevoIndice);
     });
 
-    // Click en indicadores
     indicadores.forEach((ind, index) => {
         ind.addEventListener('click', function() {
             irA(index);
         });
     });
 
-    // Teclado: flechas izquierda/derecha
     document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowLeft') {
             btnPrev.click();
