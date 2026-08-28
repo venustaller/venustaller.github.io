@@ -12,7 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ----- CARGAR PRODUCTOS -----
-function cargarProductos(filtro = 'todos') {
+// ============================================
+// VARIABLES GLOBALES
+// ============================================
+let todosLosProductos = [];
+let filtroActual = 'todos';
+let textoBusqueda = '';
+
+// ----- CARGAR PRODUCTOS -----
+function cargarProductos(filtro = 'todos', busqueda = '') {
     const grid = document.getElementById('productosGrid');
     grid.innerHTML = '<div class="loading">🌟 Cargando productos...</div>';
 
@@ -29,17 +37,34 @@ function cargarProductos(filtro = 'todos') {
                 return;
             }
 
-            const productosFiltrados = filtro === 'todos'
-                ? data.productos
-                : data.productos.filter(p => p.categoria === filtro);
+            // Guardar todos los productos
+            todosLosProductos = data.productos;
 
-            if (productosFiltrados.length === 0) {
-                grid.innerHTML = '<div class="productos__sin-productos">✨ No hay productos en esta categoría.</div>';
-                return;
+            // Aplicar filtros
+            let productosFiltrados = todosLosProductos;
+
+            // 1. Filtrar por categoría
+            if (filtro !== 'todos') {
+                productosFiltrados = productosFiltrados.filter(p => p.categoria === filtro);
+            }
+
+            // 2. Filtrar por búsqueda (nombre, color o descripción)
+            if (busqueda.trim() !== '') {
+                const busquedaLower = busqueda.toLowerCase().trim();
+                productosFiltrados = productosFiltrados.filter(p => {
+                    return p.nombre.toLowerCase().includes(busquedaLower) ||
+                           (p.color && p.color.toLowerCase().includes(busquedaLower)) ||
+                           (p.descripcion && p.descripcion.toLowerCase().includes(busquedaLower));
+                });
             }
 
             // Ordenar: destacados primero
             productosFiltrados.sort((a, b) => (b.destacado ? 1 : 0) - (a.destacado ? 1 : 0));
+
+            if (productosFiltrados.length === 0) {
+                grid.innerHTML = `<div class="productos__sin-productos">🔍 No encontramos productos que coincidan con "<strong>${busqueda}</strong>".</div>`;
+                return;
+            }
 
             const coloresMap = {
                 'Turquesa': '#00BCD4',
@@ -121,7 +146,6 @@ function cargarProductos(filtro = 'todos') {
             `;
         });
 }
-
 // ----- FORMATEAR PRECIO -----
 function formatearPrecio(precio) {
     return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
