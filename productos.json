@@ -517,6 +517,116 @@
       "color": "Negro",
       "destacado": false,
       "disponible": true
+    },
+    {
+      "id": 48,
+      "nombre": "Aros Eloísa Burdeo",
+      "precio": 4990,
+      "descripcion": "Aros de arcilla polimérica de un solo color para darle un toque simple a tu look.",
+      "imagen": "doblesemicirculob.png",
+      "categoria": "aros",
+      "color": "Burdeo",
+      "destacado": false,
+      "disponible": true
+    },
+        {
+      "id": 49,
+      "nombre": "Aros Eloísa Naranjo",
+      "precio": 4990,
+      "descripcion": "Aros de arcilla polimérica de un solo color para darle un toque simple a tu look.",
+      "imagen": "doblesemicirculona.png",
+      "categoria": "aros",
+      "color": "Naranjo",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 50,
+      "nombre": "Aros Eloísa Fucsia",
+      "precio": 4990,
+      "descripcion": "Aros de arcilla polimérica de un solo color para darle un toque simple a tu look.",
+      "imagen": "doblesemicirculor.png",
+      "categoria": "aros",
+      "color": "Fucsia",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 51,
+      "nombre": "Aros Mid-Elena azul-menta",
+      "precio": 990,
+      "descripcion": "Aros de arcilla polimérica con forma de medias flores color azul con borde menta",
+      "imagen": "mediaflorac.png",
+      "categoria": "aros",
+      "color": "Azul con Menta",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 52,
+      "nombre": "Aros Isabel Café con Dorado",
+      "precio": 9990,
+      "descripcion": "Aros de arcilla polimérica estilo argolla maciza color café con toques dorados.",
+      "imagen": "semicirculod.png",
+      "categoria": "aros",
+      "color": "Café con Dorado",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 53,
+      "nombre": "Aros Isabel Negro",
+      "precio": 9990,
+      "descripcion": "Aros de arcilla polimérica estilo argolla maciza color negro mate.",
+      "imagen": "semicirculon.png",
+      "categoria": "aros",
+      "color": "Negro",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 54,
+      "nombre": "Aros Isabel fucsia abstracto",
+      "precio": 9990,
+      "descripcion": "Aros de arcilla polimérica estilo argolla maciza color fucsia con toques rosados.",
+      "imagen": "semicirculor.png",
+      "categoria": "aros",
+      "color": "Fucsia",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 55,
+      "nombre": "Aros Isabel Yayoi",
+      "precio": 9990,
+      "descripcion": "Aros de arcilla polimérica estilo argolla maciza color verde con puntos morados inspirados en honor a Yayoi Kusama.",
+      "imagen": "semicirculovr.png",
+      "categoria": "aros",
+      "color": "Verde con Morado",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 56,
+      "nombre": "Aros Ayleen raya verde-rosa",
+      "precio": 5990,
+      "descripcion": "Aros de arcilla polimérica Raya verde-rosa.",
+      "imagen": "coraflorvr.png",
+      "categoria": "aros",
+      "color": "Verde con Rosado",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 57,
+      "nombre": "Aros Ayleen verde",
+      "precio": 5990,
+      "descripcion": "Aros de arcilla polimérica color verde con toque ahumado.",
+      "imagen": "coraflorv.png",
+      "categoria": "aros",
+      "color": "Verde",
+      "destacado": true,
+      "disponible": true
     }
     
   ]
