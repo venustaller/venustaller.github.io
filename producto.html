@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venus Taller · Detalle del producto</title>
+    <meta name="description" content="Detalle del producto de Venus Taller" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="estilo.css" />
+    <style>
+        /* Estilos específicos para la página de detalle */
+        .detalle {
+            padding: 140px 0 60px;
+            background: #ffffff;
+        }
+
+        .detalle__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Carrusel */
+        .detalle__carrusel {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(124, 77, 255, 0.1);
+            background: #f5f0fa;
+        }
+
+        .detalle__carrusel-imagenes {
+            position: relative;
+            aspect-ratio: 1/1;
+        }
+
+        .detalle__carrusel-imagenes img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .detalle__carrusel-imagenes img.activa {
+            display: block;
+        }
+
+        .detalle__carrusel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a2e;
+        }
+
+        .detalle__carrusel-btn:hover {
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .detalle__carrusel-btn--prev {
+            left: 12px;
+        }
+
+        .detalle__carrusel-btn--next {
+            right: 12px;
+        }
+
+        .detalle__carrusel-indicadores {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 0;
+        }
+
+        .detalle__carrusel-indicador {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .detalle__carrusel-indicador.activo {
+            background: #7C4DFF;
+            transform: scale(1.2);
+        }
+
+        /* Información del producto */
+        .detalle__info h1 {
+            font-size: 2.8rem;
+            font-family: 'Lobster', cursive;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .detalle__info .detalle__categoria {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7C4DFF;
+            display: block;
+            margin-bottom: 12px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .detalle__info .detalle__color {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 16px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .detalle__info .detalle__color span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #eee;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+
+        .detalle__info .detalle__precio {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #FF4081;
+            display: block;
+            margin-bottom: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .detalle__info .detalle__descripcion {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .detalle__info .detalle__estado {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            font-family: 'Nunito', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .detalle__info .detalle__estado--disponible {
+            background: rgba(50, 205, 50, 0.12);
+            color: #2E7D32;
+        }
+
+        .detalle__info .detalle__estado--agotado {
+            background: rgba(244, 67, 54, 0.12);
+            color: #C62828;
+        }
+
+        .detalle__info .btn--whatsapp {
+            display: inline-block;
+            padding: 16px 44px;
+            background: #25D366;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+        }
+
+        .detalle__info .btn--whatsapp:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.45);
+        }
+
+        .detalle__volver {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #7C4DFF;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .detalle__volver:hover {
+            color: #FF4081;
+        }
+
+        .loading-detalle {
+            text-align: center;
+            padding: 60px 0;
+            font-size: 1.2rem;
+            color: #999;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .detalle__no-encontrado {
+            text-align: center;
+            padding: 60px 0;
+            font-size: 1.2rem;
+            color: #999;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .detalle {
+                padding: 120px 0 40px;
+            }
+
+            .detalle__grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .detalle__info h1 {
+                font-size: 2rem;
+            }
+
+            .detalle__info .detalle__precio {
+                font-size: 1.6rem;
+            }
+
+            .detalle__carrusel-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="imagenes/logo.jpeg" alt="Venus Taller" class="logo__img" />
+                    <span class="logo__tagline">✦ Hecho a mano sobre ruedas ✦</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="index.html#nosotras">Nosotras</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ DETALLE DEL PRODUCTO ============ -->
+    <section class="detalle" id="detalle">
+        <div class="container">
+            <a href="index.html#productos" class="detalle__volver">← Volver a productos</a>
+            <div id="detalleContenido">
+                <div class="loading-detalle">🌟 Cargando producto...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <img src="imagenes/logo.jpeg" alt="Venus Taller" class="footer__logo" />
+                    <p class="footer__tagline">✦ Hecho a mano sobre ruedas ✦</p>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html#productos">🌟 Productos</a>
+                    <a href="index.html#nosotras">✨ Nosotras</a>
+                    <a href="index.html#politicas">📋 Políticas</a>
+                    <a href="index.html#faq">❓ FAQ</a>
+                    <a href="index.html#contacto">💬 Contacto</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://instagram.com/venus.taller" target="_blank" aria-label="Instagram">
+                        <img src="imagenes/iglogo.png" alt="Instagram" class="footer__social-icon" />
+                    </a>
+                    <a href="https://tiktok.com/@venus.taller" target="_blank" aria-label="TikTok">
+                        <img src="imagenes/tiktoklogo.png" alt="TikTok" class="footer__social-icon" />
+                    </a>
+                    <a href="https://wa.me/56932494839" target="_blank" aria-label="WhatsApp">💬</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Venus Taller · Hecho a mano sobre ruedas · Con 💜 desde la carretera</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="detalle.js"></script>
+</body>
+</html>
