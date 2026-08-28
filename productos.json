@@ -340,6 +340,183 @@
       "color": "Morado con Verde Limón",
       "destacado": false,
       "disponible": true
+    },
+    {
+      "id": 32,
+      "nombre": "Aros Macarena Multicolor",
+      "precio": 7990,
+      "descripcion": "Aros de arcilla polimérica con forma de corazón Multicolor.",
+      "imagen": "coramulticolor.jpg",
+      "categoria": "aros",
+      "color": "Multicolor",
+      "destacado": false,
+      "disponible": true
+    },
+
+{
+      "id": 33,
+      "nombre": "Aros Macarena fusión",
+      "precio": 7990,
+      "descripcion": "Aros de arcilla polimérica con forma de corazón tricolor. Coloridos y alegres.",
+      "imagen": "corazoncr.jpg",
+      "categoria": "aros",
+      "color": "Multicolor",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 34,
+      "nombre": "Aros Macarena Corazón",
+      "precio": 7990,
+      "descripcion": "Aros de arcilla polimérica con forma de corazón tricolor. Coloridos y alegres.",
+      "imagen": "corazoncrr.jpg",
+      "categoria": "aros",
+      "color": "Multicolor",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 35,
+      "nombre": "Aros Macarena Vaquita",
+      "precio": 7990,
+      "descripcion": "Aros de arcilla polimérica con forma de corazón blanco con manchas negras.",
+      "imagen": "corazonvaquita.jpg",
+      "categoria": "aros",
+      "color": "Blanco y Negro",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 36,
+      "nombre": "Aros Olga Plateado",
+      "precio": 7990,
+      "descripcion": "Aros de arcilla polimérica de argollas entrelazadas color plateado envejecido que darán un toque elegante a tu día a día",
+      "imagen": "dobledonutnp.png",
+      "categoria": "aros",
+      "color": "Plateado",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 37,
+      "nombre": "Aros Olga square-lima",
+      "precio": 7990,
+      "descripcion": "Aros de arcilla polimérica de argollas entrelazadas color lima con lila",
+      "imagen": "dobledonutvg.png",
+      "categoria": "aros",
+      "color": "Lima con Lila",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 38,
+      "nombre": "Aros Daniela corazón",
+      "precio": 5990,
+      "descripcion": "Aros de arcilla polimérica colgantes de diseño abstracto para lucir tu personalidad sin verguenza.",
+      "imagen": "doblesemiovalocr.png",
+      "categoria": "aros",
+      "color": "Verde",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 39,
+      "nombre": "Aros Daniela blanco y negro",
+      "precio": 5990,
+      "descripcion": "Aros de arcilla polimérica colgantes de diseño abstracto para lucir tu personalidad sin verguenza.",
+      "imagen": "doblesemiovalonb.png",
+      "categoria": "aros",
+      "color": "Negro y blanco",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 40,
+      "nombre": "Aros Daniela Rosas",
+      "precio": 5990,
+      "descripcion": "Aros de arcilla polimérica colgantes de diseño abstracto para lucir tu personalidad sin verguenza.",
+      "imagen": "doblesemiovalorr.png",
+      "categoria": "aros",
+      "color": "Rosado",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 41,
+      "nombre": "Aros Loica",
+      "precio": 25990,
+      "descripcion": "Aros de arcilla polimérica con forma de ave versión Loicas. Con dimorfismo sexual hecho con mucha delicadeza y presición",
+      "imagen": "loica.jpg",
+      "categoria": "aros",
+      "color": "Negro y Rojo",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 42,
+      "nombre": "Aros Margarita",
+      "precio": 8990,
+      "descripcion": "Aros de arcilla polimérica con forma de margaritas.",
+      "imagen": "margarita.png",
+      "categoria": "aros",
+      "color": "Blanco",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 43,
+      "nombre": "Aros Mid-Elena Azul",
+      "precio": 5990,
+      "descripcion": "Aros de arcilla polimérica con forma de medias flores color azul eléctrico.",
+      "imagen": "mediaflora.png",
+      "categoria": "aros",
+      "color": "Azul",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 44,
+      "nombre": "Aros Mid-Elena Burdeo",
+      "precio": 5990,
+      "descripcion": "Aros de arcilla polimérica con forma de medias flores color burdeo.",
+      "imagen": "mediaflorc.png",
+      "categoria": "aros",
+      "color": "Burdeo",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 45,
+      "nombre": "Aros Mid-Elena naranjo",
+      "precio": 5990,
+      "descripcion": "Aros de arcilla polimérica con forma de medias flores color naranjo.",
+      "imagen": "mediaflorn.png",
+      "categoria": "aros",
+      "color": "Naranjo",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 46,
+      "nombre": "Aros Orquidea Verde",
+      "precio": 12990,
+      "descripcion": "Aros de arcilla polimérica con forma de orquidea color verde. Para llevar la elegancia y belleza de esta flor a todas partes.",
+      "imagen": "orquideaverde.png",
+      "categoria": "aros",
+      "color": "Verde",
+      "destacado": false,
+      "disponible": true
+    },
+    {
+      "id": 47,
+      "nombre": "Aros Eloísa Negros",
+      "precio": 4990,
+      "descripcion": "Aros de arcilla polimérica de un solo color para darle un toque simple a tu look. ",
+      "imagen": "doblesemicirculon.png",
+      "categoria": "aros",
+      "color": "Negro",
+      "destacado": false,
+      "disponible": true
     }
     
   ]
