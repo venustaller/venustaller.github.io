@@ -133,18 +133,27 @@
         </div>
     </section>
 
-    <!-- ============ PRODUCTOS ============ -->
+ <!-- ============ PRODUCTOS ============ -->
     <section class="productos" id="productos">
         <div class="container">
             <span class="tag">🌈 Colección</span>
             <h2>Nuestros accesorios</h2>
             <p class="productos__subtitulo">Cada pieza es única, hecha a mano con arcilla polimérica</p>
+
+            <!-- BUSCADOR DE PRODUCTOS -->
+            <div class="productos__buscador">
+                <input type="text" id="buscadorProductos" class="buscador-input" placeholder="🔍 Buscar por nombre, color o descripción..." />
+            </div>
+
+            <!-- FILTROS POR CATEGORÍA -->
             <div class="productos__filtros">
                 <button class="filtro-btn filtro-btn--activo" data-filtro="todos">✨ Todos</button>
                 <button class="filtro-btn" data-filtro="aros">💜 Aros</button>
                 <button class="filtro-btn" data-filtro="collares">💚 Collares</button>
                 <button class="filtro-btn" data-filtro="pulseras">💛 Pulseras</button>
             </div>
+
+            <!-- GRID DE PRODUCTOS -->
             <div class="productos__grid" id="productosGrid">
                 <div class="loading">🌟 Cargando productos...</div>
             </div>
