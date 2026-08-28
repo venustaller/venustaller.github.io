@@ -1229,3 +1229,39 @@ section h2 {
     transform: none;
     box-shadow: none;
 }
+/* ============================================
+   BUSCADOR DE PRODUCTOS
+   ============================================ */
+.productos__buscador {
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+}
+
+.buscador-input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #e8e0f0;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #fff;
+    color: #1a1a2e;
+}
+
+.buscador-input:focus {
+    border-color: #7C4DFF;
+    box-shadow: 0 0 0 4px rgba(124, 77, 255, 0.1);
+}
+
+.buscador-input::placeholder {
+    color: #aaa;
+}
+
+@media (max-width: 480px) {
+    .buscador-input {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+}
