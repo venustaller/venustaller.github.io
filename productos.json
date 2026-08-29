@@ -298,7 +298,7 @@
       "categoria": "aros",
       "color": "Azul con Celeste",
       "destacado": false,
-      "disponible": true
+      "disponible": false
     },
     {
       "id": 26,
@@ -418,7 +418,7 @@
       "categoria": "aros",
       "color": "Blanco y Negro",
       "destacado": false,
-      "disponible": true
+      "disponible": false
     },
     {
       "id": 36,
