@@ -1253,3 +1253,19 @@ section h2 {
         justify-content: center;
     }
 }
+/* ============================================
+   DEPURACIÓN - VER CELDAS DEL GRID
+   ============================================ */
+#productosGrid {
+    border: 3px solid red !important;
+}
+
+#productosGrid .producto-card-link {
+    border: 2px solid blue !important;
+    background: rgba(0, 0, 255, 0.05) !important;
+}
+
+#productosGrid .producto-card {
+    border: 2px solid green !important;
+    background: rgba(0, 255, 0, 0.05) !important;
+}
