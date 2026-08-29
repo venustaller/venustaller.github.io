@@ -178,7 +178,7 @@
       "categoria": "aros",
       "color": "fucsia con naranjo",
       "destacado": false,
-      "disponible": true
+      "disponible": false
     },
     {
       "id": 16,
@@ -334,7 +334,7 @@
       "categoria": "aros",
       "color": "Burdeo",
       "destacado": false,
-      "disponible": true
+      "disponible": false
     },
     {
       "id": 29,
