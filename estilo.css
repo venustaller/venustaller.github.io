@@ -1263,6 +1263,7 @@ section h2 {
 #productosGrid .producto-card-link {
     border: 4px solid orange !important;  /* Naranja es más visible */
     background: rgba(255, 165, 0, 0.1) !important;  /* Fondo naranja claro */
+    margin: 4px !important;  /* ← NUEVO: separa los elementos */
 }
 
 #productosGrid .producto-card {
