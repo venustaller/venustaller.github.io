@@ -106,26 +106,26 @@ function cargarProductos(filtro = 'todos', busqueda = '') {
                        </a>`
                     : `<button class="producto-card__btn producto-card__btn--agotado" disabled>❌ Agotado</button>`;
 
-                // ESTRUCTURA CORRECTA: <a> contiene todo, incluyendo el <div> interno
-                html += `
-                    <a href="producto.html?id=${producto.id}" class="producto-card-link">
-                        <div class="producto-card" data-categoria="${producto.categoria}">
-                            <div class="producto-card__imagen">
-                                ${imagenHtml}
-                                ${producto.destacado ? '<div style="position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FFD740,#FF9100);color:#fff;padding:4px 14px;border-radius:30px;font-size:0.7rem;font-weight:700;font-family:Nunito,sans-serif;">⭐ Destacado</div>' : ''}
-                            </div>
-                            <div class="producto-card__info">
-                                <span class="producto-card__categoria">✦ ${producto.categoria}</span>
-                                <h3 class="producto-card__nombre">${producto.nombre}</h3>
-                                <div class="producto-card__color">${colorDisplay} ${producto.color || ''}</div>
-                                <p class="producto-card__descripcion">${producto.descripcion || ''}</p>
-                                <span class="producto-card__precio">$${precioFormateado}</span>
-                                ${estadoHtml}
-                                ${botonHtml}
-                            </div>
-                        </div>
-                    </a>
-                `;
+                
+               html += `
+    <div class="producto-card-link" onclick="window.location.href='producto.html?id=${producto.id}'" style="cursor:pointer;display:block;text-decoration:none;color:inherit;">
+        <div class="producto-card" data-categoria="${producto.categoria}">
+            <div class="producto-card__imagen">
+                ${imagenHtml}
+                ${producto.destacado ? '<div style="position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FFD740,#FF9100);color:#fff;padding:4px 14px;border-radius:30px;font-size:0.7rem;font-weight:700;font-family:Nunito,sans-serif;">⭐ Destacado</div>' : ''}
+            </div>
+            <div class="producto-card__info">
+                <span class="producto-card__categoria">✦ ${producto.categoria}</span>
+                <h3 class="producto-card__nombre">${producto.nombre}</h3>
+                <div class="producto-card__color">${colorDisplay} ${producto.color || ''}</div>
+                <p class="producto-card__descripcion">${producto.descripcion || ''}</p>
+                <span class="producto-card__precio">$${precioFormateado}</span>
+                ${estadoHtml}
+                ${botonHtml}
+            </div>
+        </div>
+    </div>
+`;
             });
 
             grid.innerHTML = html;
