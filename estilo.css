@@ -1261,8 +1261,8 @@ section h2 {
 }
 
 #productosGrid .producto-card-link {
-    border: 2px solid blue !important;
-    background: rgba(0, 0, 255, 0.05) !important;
+    border: 4px solid orange !important;  /* Naranja es más visible */
+    background: rgba(255, 165, 0, 0.1) !important;  /* Fondo naranja claro */
 }
 
 #productosGrid .producto-card {
